@@ -1,6 +1,15 @@
 import './style.css'
 
 document.addEventListener('DOMContentLoaded', () => {
+    const footerContainer = document.querySelector('#footer .container');
+    if (footerContainer && !footerContainer.querySelector('.footer-links')) {
+        const footerNav = document.createElement('nav');
+        footerNav.className = 'footer-links';
+        footerNav.setAttribute('aria-label', 'Rechtliche Links');
+        footerNav.innerHTML = '<a href="/impressum.html">Impressum</a>';
+        footerContainer.appendChild(footerNav);
+    }
+
     // Intersection Observer for fade-in animations
     const observerOptions = {
         threshold: 0.1,
