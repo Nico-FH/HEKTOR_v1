@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const footerNav = document.createElement('nav');
         footerNav.className = 'footer-links';
         footerNav.setAttribute('aria-label', 'Rechtliche Links');
-        footerNav.innerHTML = '<a href="/impressum.html">Impressum</a>';
+        footerNav.innerHTML = '<a href="#impressum">Impressum</a>';
         footerContainer.appendChild(footerNav);
     }
 
